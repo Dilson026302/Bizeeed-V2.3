@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #24a94a;
+  --accent-color: #fec113;
+  --background-color: #f5f5f5;
+  --text-color: #000000;
+  --font-family: 'Inter', system-ui, sans-serif;
+  --button-hover-color: #1e8b3a;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+button {
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}

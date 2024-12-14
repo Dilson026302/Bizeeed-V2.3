@@ -1,0 +1,118 @@
+.social-links {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding-top: 55px;
+  padding-right: 8px;
+  height: calc(100vh - 12px);
+  margin-top: 55px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 110px;
+  flex-wrap: wrap; /* Allow header items to wrap on smaller screens */
+}
+
+.add-account-btn {
+  background-color: #24a94a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Adjust button text size */
+}
+
+/* Responsive Grid */
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust card size for smaller screens */
+  gap: 16px; /* Reduce gap on smaller screens */
+}
+
+.account-card {
+  /* Correct the selector here */
+  background: white;
+  border-radius: 10px;
+  /* Other styles */
+}
+
+.platform-logo {
+  width: 40px; /* Scale down for smaller screens */
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.manage-btn,
+.remove-btn {
+  margin-top: 8px; /* Reduce spacing for buttons */
+  padding: 6px 10px; /* Adjust button padding */
+  font-size: 12px; /* Adjust font size for smaller buttons */
+}
+
+.manage-btn {
+  background-color: #fec113;
+  color: black;
+}
+
+.remove-btn {
+  background-color: #ff5f5f;
+  color: white;
+}
+
+.skeleton-loader {
+  text-align: center;
+  padding: 16px;
+  font-size: 14px; /* Smaller font size for skeleton loader */
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    padding: 15px;
+    padding-top: 40px;
+    height: auto;
+    margin-top: 60px;
+    border-radius: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .add-account-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .account-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .account-card {
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .platform-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .manage-btn,
+  .remove-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+} /* Ensure this closes the media query */

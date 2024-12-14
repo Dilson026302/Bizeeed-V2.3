@@ -1,0 +1,205 @@
+/* General Topbar Styling */
+.topBar {
+  display: flex;
+  justify-content: center; /* Center all child elements horizontally */
+  align-items: center; /* Center all child elements vertically */
+  height: 60px;
+  position: sticky; /* Changed from fixed to sticky */
+  top: 0;
+  width: 100%;
+  background: transparent; /* Transparent background */
+  z-index: 998;
+  border-bottom: none; /* Remove border */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Centered Search Bar */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure it scales proportionally */
+  max-width: 400px; /* Restrict the max width */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+  border-radius: 20px;
+  padding: 0 12px;
+  height: 40px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.searchContainer:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  max-width: 500px; /* Default expanded width on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .searchContainer:hover {
+    max-width: 400px; /* Adjust for smaller screens (e.g., tablets) */
+  }
+}
+
+@media (max-width: 768px) {
+  .searchContainer:hover {
+    max-width: 300px; /* Adjust for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .searchContainer:hover {
+    max-width: 200px; /* Further adjust for very small screens */
+  }
+}
+
+
+.searchIcon {
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+/* Right Section with Icons */
+.rightSection {
+  position: absolute; /* To allow centering of the searchContainer */
+  top: 1;
+  right: 16px; /* Align it to the right edge */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255,0.2 ); /* Transparent white for frosted effect */
+  border-radius: 50%; /* Circle shape */
+  backdrop-filter: blur(10px); /* Frosted glass blur */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glassy look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+  cursor: pointer;
+}
+
+.iconContainer .icon {
+  width: 35px; /* Consistent icon size */
+  height: 35px;
+  color: #fff; /* Icon color */
+  transition: transform 0.3s ease; /* Smooth size transitions */
+}
+
+.avatarContainer {
+  cursor: pointer;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  padding-right: 20px; /* Adjust the value as needed */
+  padding-top: 1px;
+}
+
+.iconContainer:hover,
+.avatarContainer:hover {
+  transform: scale(1.1); /* Subtle zoom effect */
+  opacity: 0.8; /* Slight fade effect */
+}
+
+/* Avatar Styling */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.4); /* Subtle transparency for seamless blending */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: max-content; /* Adjusts width to fit content */
+  min-width: 200px; /* Ensures dropdown has a minimum width */
+  max-width: 90%; /* Prevents overflowing on small screens */
+}
+
+@media (min-width: 768px) {
+  .dropdown {
+    max-width: 400px; /* Restricts max width on medium to larger screens */
+  }
+}
+
+.userEmail {
+  margin-bottom: 8px;
+  color: #000;
+  font-weight: 300;
+  font-size: small;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.logoutText {
+  color: #fec113;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.logoutText:hover {
+  color: #ff0000; /* Red color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .searchContainer {
+    max-width: 300px; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .searchContainer {
+    max-width: 200px; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .searchContainer {
+    max-width: 150px; /* Adjust width for extra-small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdownItem {
+    padding: 6px 10px; /* Smaller padding for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .logoutText {
+    font-size: 14px; /* Smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdownItem {
+    padding: 4px 8px; /* Even smaller padding for extra small screens */
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .logoutText {
+    font-size: 12px; /* Smaller font size for extra small screens */
+    font-weight: 500; /* Reduce font weight for less bold appearance */
+  }
+}
